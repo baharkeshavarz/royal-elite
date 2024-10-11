@@ -1,10 +1,23 @@
+'use client';
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { Header } from '@/components/Header';
+import { alpha, styled } from '@mui/material/styles';
 
-const page = () => {
+const Home = () => {
   const t = useTranslations();
 
-  return <>{t('footer.navigation.myAccount')}</>;
+  const Layout = styled('div')(({ theme }) => ({
+    backgroundColor: theme.palette.background.default,
+    height: '100vh',
+  }));
+
+  return (
+    <Layout>
+      <Header />
+    </Layout>
+  );
 };
 
-export default page;
+export default Home;

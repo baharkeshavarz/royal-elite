@@ -4,10 +4,17 @@
   "stringSeparator": ",",
   "header": {
     "auth": {
-      "login": "Login",
-      "register": "Register"
+      "login": "ورود",
+      "register": "ثبت نام"
     },
-    "navigation": {},
+    "navigation": {
+      "merchant": "درخواست پذیرندگان",
+      "support": "پشتیبانی",
+      "faq": "سوالات متداول",
+      "aboutUs": "درباره ما",
+      "contactUs": "تماس با ما",
+      "terms": "قوانین و مقررات"
+    },
     "search": {
       "placeholder": "Search..."
     },
@@ -33,7 +40,7 @@
       "contactUs": "Contact Us"
     },
     "navigation": {
-      "myAccount": "پروفایل من",
+      "myAccount": "My Account",
       "categories": "Categories",
       "home": "Home"
     }

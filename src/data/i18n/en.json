@@ -7,7 +7,14 @@
       "login": "Login",
       "register": "Register"
     },
-    "navigation": {},
+    "navigation": {
+      "merchant": "درخواست پذیرندگان",
+      "support": "پشتیبانی",
+      "faq": "سوالات متداول",
+      "aboutUs": "درباره ما",
+      "contactUs": "تماس با ما",
+      "terms": "قوانین و مقررات"
+    },
     "search": {
       "placeholder": "Search..."
     },
