@@ -43,6 +43,11 @@ export const globalStyles: GlobalStylesProps['styles'] = (theme) => ({
   },
 });
 
+const mode = 'light';
+const lightColor = '237, 201, 103';
+const darkColor = '237, 201, 103';
+const mainColor = mode === 'light' ? lightColor : darkColor;
+
 const themeOptions: ThemeOptions = {
   palette: {
     primary: {
@@ -50,7 +55,7 @@ const themeOptions: ThemeOptions = {
       dark: '#EDC967',
       medium: '#D2AC47',
       light: '#F7EF8A',
-      contrastText: '#000',
+      contrastText: '#FFF',
     },
     background: {
       default: '#1c1c21',
@@ -123,6 +128,7 @@ const themeOptions: ThemeOptions = {
       textTransform: 'capitalize',
     },
   },
+  divider: `rgba(${mainColor})`,
   shape: {
     borderRadius: 8,
   },

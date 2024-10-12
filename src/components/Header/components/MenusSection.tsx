@@ -26,7 +26,12 @@ const MenusSection = () => {
       }}
     >
       {pages.map((page) => (
-        <Button LinkComponent={NextLink} href={page.href} key={page.label}>
+        <Button
+          LinkComponent={NextLink}
+          href={page.href}
+          key={page.label}
+          sx={{ color: 'white' }}
+        >
           {page.label}
         </Button>
       ))}

@@ -1,18 +1,24 @@
-import { Link as NextLink } from '@/navigation';
 import { useTranslations } from 'next-intl';
-import Button from '@mui/material/Button';
+import { Button, useTheme } from '@mui/material';
+import ButtonWithGradient from '@/components/common/ButtonWithGradient';
 
 const LoginInfo = () => {
   const t = useTranslations();
+  const theme = useTheme();
   return (
     <>
-      <Button LinkComponent={NextLink} href="/login">
+      <Button
+        variant="outlined"
+        sx={{
+          color: theme.palette.common.white,
+        }}
+      >
         {t('header.auth.login')}
       </Button>
 
-      <Button LinkComponent={NextLink} href="/register">
+      <ButtonWithGradient variant="contained">
         {t('header.auth.register')}
-      </Button>
+      </ButtonWithGradient>
     </>
   );
 };
