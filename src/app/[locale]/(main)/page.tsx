@@ -4,6 +4,8 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Header } from '@/components/Header';
 import { styled } from '@mui/material/styles';
+import { Footer } from '@/components/Footer';
+import { Box } from '@mui/material';
 
 const Home = () => {
   const t = useTranslations();
@@ -16,6 +18,8 @@ const Home = () => {
   return (
     <Layout>
       <Header />
+      <Box sx={{ minHeight: 650, backgroundColor: 'white' }}>container</Box>
+      <Footer />
     </Layout>
   );
 };
