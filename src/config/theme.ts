@@ -1,14 +1,11 @@
 'use client';
 
 import { Link } from '@/navigation';
-import {
-  ThemeOptions,
-  createTheme,
-  type GlobalStylesProps,
-} from '@mui/material';
+import { GlobalStyles, ThemeOptions, createTheme } from '@mui/material';
+
 import { grey } from '@mui/material/colors';
 
-export const globalStyles: GlobalStylesProps['styles'] = (theme) => ({
+export const globalStyles: GlobalStyles['styles'] = (theme) => ({
   a: {
     textDecoration: 'none !important',
   },
