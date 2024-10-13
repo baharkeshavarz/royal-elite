@@ -5,11 +5,13 @@ import {
   Stack,
   Button,
   useTheme,
-  Divider,
+  Link,
 } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import ButtonWithGradient from '../common/ButtonWithGradient';
-import { Link } from '@/navigation';
+import Logo from '../common/Logo';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 
 const Footer = () => {
   const t = useTranslations();
@@ -34,26 +36,27 @@ const Footer = () => {
         maxWidth="xl"
         sx={{
           display: 'flex',
-          alignItems: 'center',
           justifyContent: 'space-between',
+          p: 1,
         }}
       >
-        <Stack flex={1}>
-          <Typography
-            variant="body2"
-            align="center"
-            color={theme.palette.primary.main}
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 5,
-            }}
-          >
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تک
-          </Typography>
+        <Stack flex={1} p={1}>
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <Logo />
+            <Typography
+              variant="body2"
+              align="center"
+              color={theme.palette.primary.main}
+              sx={{
+                textAlign: 'center',
+              }}
+            >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تک
+            </Typography>
+          </Box>
+
           <Box
             display="flex"
             flexDirection="column"
@@ -70,6 +73,7 @@ const Footer = () => {
                 }}
               >
                 90006070
+                <LocalPhoneIcon />
               </Button>
               <Button
                 variant="outlined"
@@ -78,6 +82,7 @@ const Footer = () => {
                 }}
               >
                 09100910059
+                <PhoneAndroidIcon />
               </Button>
             </Stack>
             <ButtonWithGradient variant="contained" sx={{ minWidth: 300 }}>
@@ -85,26 +90,53 @@ const Footer = () => {
             </ButtonWithGradient>
           </Box>
         </Stack>
-        <Stack
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          justifyContent="space-between"
-          gap={1}
-          flex={1}
-        >
-          <Stack display="flex" flexDirection="column" alignItems="center">
-            {pages.map((page) => {
-              return (
-                <Link key={page.label} href={page.href}>
-                  {page.label}
-                </Link>
-              );
-            })}
-          </Stack>
-          <Box sx={{ minWidth: 300 }}>Map</Box>
 
-          <Stack>icons</Stack>
+        <Stack flex={1} p={1}>
+          <Box
+            display="flex"
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Stack display="flex" flexDirection="column" alignItems="center">
+              <Link
+                href="#"
+                variant="body2"
+                sx={{
+                  color: theme.palette.grey[500],
+                  marginBottom: 1,
+                }}
+              >
+                {t('footer.links.quickAccess')}
+              </Link>
+
+              {pages.map((page) => {
+                return (
+                  <Typography
+                    variant="body2"
+                    key={page.label}
+                    sx={{
+                      width: '100%',
+                      p: 0.8,
+                      borderBottom: '1px solid',
+                      borderColor: theme.palette.grey[500],
+                    }}
+                  >
+                    <Link
+                      href={page.href}
+                      sx={{
+                        color: theme.palette.common.white,
+                      }}
+                    >
+                      {page.label}
+                    </Link>
+                  </Typography>
+                );
+              })}
+            </Stack>
+            <Box sx={{ minWidth: 300 }}>Map</Box>
+            <Stack>icons</Stack>
+          </Box>
         </Stack>
       </Container>
     </Box>
