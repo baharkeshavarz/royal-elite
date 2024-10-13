@@ -2,6 +2,9 @@
   "siteInfo": {
     "title": "Royal Elite"
   },
+  "confirmAlert": {
+    "title": "Are you sure?"
+  },
   "messages": {},
   "categories": {},
   "stringSeparator": ",",

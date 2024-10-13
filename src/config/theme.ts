@@ -6,7 +6,7 @@ import {
   createTheme,
   type GlobalStylesProps,
 } from '@mui/material';
-import { green, grey } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 export const globalStyles: GlobalStylesProps['styles'] = (theme) => ({
   a: {
@@ -43,17 +43,11 @@ export const globalStyles: GlobalStylesProps['styles'] = (theme) => ({
   },
 });
 
-const mode = 'light';
-const lightColor = '237, 201, 103';
-const darkColor = '237, 201, 103';
-const mainColor = mode === 'light' ? lightColor : darkColor;
-
 const themeOptions: ThemeOptions = {
   palette: {
     primary: {
       main: '#AE8625',
       dark: '#EDC967',
-      medium: '#D2AC47',
       light: '#F7EF8A',
       contrastText: '#FFF',
     },
@@ -128,7 +122,6 @@ const themeOptions: ThemeOptions = {
       textTransform: 'capitalize',
     },
   },
-  divider: `rgba(${mainColor})`,
   shape: {
     borderRadius: 8,
   },
