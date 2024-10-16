@@ -1,11 +1,12 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Header } from '@/components/Header';
 import { styled } from '@mui/material/styles';
 import { Footer } from '@/components/Footer';
 import { Box } from '@mui/material';
 import HomeSuppliers from '@/components/HomeSuppliers/HomeSuppliers';
+import { Navbar } from '@/components/Navbar';
+import { Header } from '@/components/Header';
 
 const Home = () => {
   const t = useTranslations();
@@ -16,6 +17,7 @@ const Home = () => {
 
   return (
     <Layout>
+      <Navbar />
       <Header />
       <Box
         sx={{
