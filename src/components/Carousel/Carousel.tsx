@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Box, Button, Card, Stack, Typography, useTheme } from '@mui/material';
 import { alpha, styled } from '@mui/system';
 import CarouselButtons from './components/CarouselButtons';
-import { CustomCard } from '../CustomCard';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { SupplierCard } from '../SupplierCard';
 
 interface CarouselImage {
   imgSrc: string;
@@ -141,7 +141,7 @@ const Carousel: React.FC = () => {
       <CarouselContainer>
         <CarouselCard>
           {CarouselSlides[currentIndex].images.map((card, index) => (
-            <CustomCard key={index} card={card} />
+            <SupplierCard key={index} card={card} />
           ))}
         </CarouselCard>
       </CarouselContainer>

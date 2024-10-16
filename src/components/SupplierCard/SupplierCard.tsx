@@ -11,11 +11,11 @@ import {
 } from './components/Card';
 import { FC } from 'react';
 
-interface CustomCardProps {
+interface SupplierCardProps {
   card: any;
 }
 
-const CustomCard: FC<CustomCardProps> = ({ card }) => {
+const SupplierCard: FC<SupplierCardProps> = ({ card }) => {
   return (
     <CardBox>
       <ImageBlock>
@@ -41,4 +41,4 @@ const CustomCard: FC<CustomCardProps> = ({ card }) => {
   );
 };
 
-export default CustomCard;
+export default SupplierCard;
