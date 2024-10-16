@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Box, Button, Card, Stack, Typography, useTheme } from '@mui/material';
+
 import { alpha, styled } from '@mui/system';
 import CarouselButtons from './components/CarouselButtons';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { SupplierCard } from '../SupplierCard';
+import Container from '@mui/material/Container';
 
 interface CarouselImage {
   imgSrc: string;
@@ -93,7 +95,7 @@ const CarouselCard = styled(Card)({
   gap: 8,
 });
 
-const Carousel: React.FC = () => {
+const DesktopSuppliersCarousel = () => {
   const theme = useTheme();
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -109,7 +111,7 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <>
+    <Container maxWidth="xl" sx={{ p: 8 }}>
       <Box display="flex" justifyContent="space-between" p={2}>
         <Stack spacing={1}>
           <Typography variant="h6" color={theme.palette.common.white}>
@@ -145,8 +147,8 @@ const Carousel: React.FC = () => {
           ))}
         </CarouselCard>
       </CarouselContainer>
-    </>
+    </Container>
   );
 };
 
-export default Carousel;
+export default DesktopSuppliersCarousel;
