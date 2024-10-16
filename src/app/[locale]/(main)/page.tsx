@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 import HomeSuppliers from '@/components/HomeSuppliers/HomeSuppliers';
 import { Navbar } from '@/components/Navbar';
 import { Header } from '@/components/Header';
+import SupplierProductItems from '@/components/HomeSuppliers/components/SupplierItems';
 
 const Home = () => {
   const t = useTranslations();
@@ -19,6 +20,8 @@ const Home = () => {
     <Layout>
       <Navbar />
       <Header />
+      <SupplierProductItems />
+
       <Box
         sx={{
           minHeight: 800,
