@@ -6,12 +6,14 @@ import {
   Button,
   useTheme,
   Link,
+  Stack,
 } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import ButtonWithGradient from '../common/ButtonWithGradient';
 import Logo from '../common/Logo';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import Image from '@/components/common/Image';
 
 const Footer = () => {
   const t = useTranslations();
@@ -113,24 +115,42 @@ const Footer = () => {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              p={2}
-            >
-              {/* Replace with actual map component */}
-              <Box
-                sx={{
-                  width: '100%',
-                  height: 200,
-                  backgroundColor: theme.palette.grey[200],
+            <Box display="flex" alignItems="center" p={1}>
+              <Image
+                draggable={false}
+                width={400}
+                height={180}
+                alt=""
+                style={{
+                  objectFit: 'cover',
+                  cursor: 'pointer',
+                  userSelect: 'none',
+                  maxWidth: '100%',
+                  maxHeight: '100%',
                 }}
+                src="/assets/images/map.png"
+              />
+              <Stack
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                spacing={2}
               >
-                Map
-              </Box>
-              {/* Replace with actual icons component */}
-              <Box mt={2}>icons</Box>
+                <Image
+                  draggable={false}
+                  width={200}
+                  height={100}
+                  alt=""
+                  src="/assets/images/certificate1.png"
+                />
+                <Image
+                  draggable={false}
+                  width={200}
+                  height={100}
+                  alt=""
+                  src="/assets/images/certificate1.png"
+                />
+              </Stack>
             </Box>
           </Grid>
         </Grid>
