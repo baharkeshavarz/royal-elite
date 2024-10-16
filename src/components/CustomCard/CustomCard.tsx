@@ -9,22 +9,27 @@ import {
   CardLeftContent,
   CardContainer,
 } from './components/Card';
+import { FC } from 'react';
 
-const CustomCard = () => {
+interface CustomCardProps {
+  card: any;
+}
+
+const CustomCard: FC<CustomCardProps> = ({ card }) => {
   return (
     <CardBox>
       <ImageBlock>
-        <Image src="/assets/images/car1.jpg" alt="" />
+        <Image src={card.imgSrc} alt="" />
       </ImageBlock>
       <CardContainer>
         <CardLeftContent>
           <ContextContainer>
-            <Typography variant="body1">بهروز</Typography>
-            <Typography variant="caption">شهرک غرب</Typography>
+            <Typography variant="body1">{card.title}</Typography>
+            <Typography variant="caption">{card.place}</Typography>
           </ContextContainer>
 
           <ContextContainer>
-            <Typography variant="body2"> پوشاک زنانه و مردانه</Typography>
+            <Typography variant="body2"> معرفی پذیرنده</Typography>
             <Typography variant="caption">* * *</Typography>
           </ContextContainer>
         </CardLeftContent>

@@ -4,11 +4,12 @@ import Button from '@mui/material/Button';
 
 export const CardBox = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: '300px',
+  padding: theme.spacing(1),
 }));
 
 export const ImageBlock = styled(Box)(({ theme }) => ({
   width: '100%',
+  height: '300px',
   borderRadius: '10px',
   padding: theme.spacing(1.5),
   border: `1px solid ${theme.palette.primary.main}`,
@@ -17,6 +18,7 @@ export const ImageBlock = styled(Box)(({ theme }) => ({
 
 export const Image = styled('img')({
   width: '100%',
+  height: '100%',
   borderRadius: '10px',
 });
 
@@ -65,7 +67,7 @@ export const RightButtonContainer = styled(Box)(({ theme }) => ({
 
 export const CardButton = styled(Button)(({ theme }) => ({
   width: '100%',
-  height: '2rem',
+  height: '2.2rem',
   position: 'relative',
   marginTop: '0.8rem',
   borderRadius: '15px',

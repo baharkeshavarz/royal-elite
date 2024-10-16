@@ -5,8 +5,8 @@ import { useTranslations } from 'next-intl';
 import { Header } from '@/components/Header';
 import { styled } from '@mui/material/styles';
 import { Footer } from '@/components/Footer';
-import { Box } from '@mui/material';
-import Suppliers from './(homepage)/suppliers/page';
+import { Box, Container } from '@mui/material';
+import { Carousel } from '@/components/Carousel';
 
 const Home = () => {
   const t = useTranslations();
@@ -25,7 +25,10 @@ const Home = () => {
           p: 5,
         }}
       >
-        <Suppliers />
+        {/* <Suppliers /> */}
+        <Container>
+          <Carousel />
+        </Container>
       </Box>
       <Footer />
     </Layout>
